@@ -5,7 +5,6 @@ const CtaBtn = () => (
     width={180}
     height={43}
     fill="none"
-    {...props}
   >
     <path
       stroke="#3F2308"
