@@ -5,7 +5,7 @@ export default async function WaitlistPage() {
   async function handleSubmit(formdata: FormData) {
     'use server';
 
-    const supabase = createSupabaseServerClient(); 
+    const supabase = await createSupabaseServerClient(); 
 
     const rawFormData = {
       name: formdata.get('name'),
@@ -16,7 +16,7 @@ export default async function WaitlistPage() {
     const { data, error } = await supabase
       .from('waitlist')
       .insert([rawFormData]);
-    if (error) console.error("Something went wrong! A form submission didn't work.");
+    if (error) console.error("Something went wrong! A form submission didn't work because:", error.message);
   }
 
   return (

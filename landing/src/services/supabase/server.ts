@@ -1,8 +1,8 @@
 import { createServerClient } from '@supabase/ssr'
-import { cookies } from 'next/headers'
+import { cookies, type UnsafeUnwrappedCookies } from 'next/headers';
 
-export function createSupabaseServerClient() {
-  const cookieStore = cookies()
+export async function createSupabaseServerClient() {
+  const cookieStore = (await cookies() as unknown as UnsafeUnwrappedCookies)
 
   // Create a server's supabase client with newly configured cookie,
   // which could be used to maintain user's session
