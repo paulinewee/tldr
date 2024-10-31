@@ -36,9 +36,9 @@ export default async function LandingLayout(props: {
 
           {props.children}
 
-          <a href="https://x.com/get_tldr/" className="underline hover4">
+          {/* <a href="https://x.com/get_tldr/" className="underline hover4">
             follow @get_tldr
-          </a>
+          </a> */}
         </div>
       </div>
     </main>

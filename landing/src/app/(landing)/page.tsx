@@ -23,7 +23,20 @@ export default async function Home() {
           enables us to most fully grow and thrive.
         </li>
       </ul>
-      <Link href="/waitlist">
+
+      <a href="https://x.com/get_tldr/" className="">
+        <button
+          className={`text-sm relative whitespace-nowrap hover4 inset-0 flex items-center justify-center`}
+        >
+          <CtaBtn dark={false} className="dark:hidden" />
+          <CtaBtn dark={true} className="hidden dark:block" />
+          <span className="absolute left-4 top-3 text-xs ">
+            follow us on twt &lt;3
+          </span>
+        </button>
+      </a>
+
+      {/* <Link href="/waitlist">
         <button
           className={`text-sm relative whitespace-nowrap hover4 inset-0 flex items-center justify-center`}
         >
@@ -33,7 +46,20 @@ export default async function Home() {
             join the waitlist
           </span>
         </button>
-      </Link>
+      </Link> */}
+
+      {/* Once supabase is working: */}
+      {/* <Link href="/waitlist">
+        <button
+          className={`text-sm relative whitespace-nowrap hover4 inset-0 flex items-center justify-center`}
+        >
+          <CtaBtn dark={false} className="dark:hidden" />
+          <CtaBtn dark={true} className="hidden dark:block" />
+          <span className="absolute left-4 top-3 text-xs ">
+            join the waitlist
+          </span>
+        </button>
+      </Link> */}
     </div>
   )
 }
